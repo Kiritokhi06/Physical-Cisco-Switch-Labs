@@ -22,4 +22,4 @@ The console connection used the following PuTTY serial settings:
 
 These settings establish the standard serial connection parameters used to access the switch's command-line interface (CLI).
 
-![PuTTY(1)](<1 - Initial-Setup-&-Device-Discovery/screenshots/PuTTY(1).png>)
+![PuTTY(1)](<./screenshots/PuTTY(1).png>)
