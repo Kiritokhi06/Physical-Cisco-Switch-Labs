@@ -42,3 +42,22 @@ Switch# delete flash:vlan.dat
 
 The switch reported that the file didn't exist at that location. Rather than treating this as a failed reset, I continued with the device discovery commands and verified the VLAN state afterward.
 
+![Write erase cmd](<./screenshots/Write_erase_cmd.png>)
+
+## Identifying the Switch and IOS Version
+
+After the reload, I used the **show version** command to identify the switch model, installed IOS version, and hardware specifications.
+
+The output identified the device as a Cisco Catalyst 3750 with the following details:
+
+- Model: WS-C3750-48TS-E
+- IOS Version: 12.2(25)SEE2
+- IOS Image: C3750-IP SERVICES-M
+- FastEthernet Interfaces: 48
+- GigabitEthernet Interfaces: 4
+
+The switch was running an older IOS release, which is important for me to consider when selecting commands and security features for future labs. Some features and commands available on newer Cisco platforms may not be supported by this software version.
+
+![Show version cmd](<./screenshots/Show_version_cmd.png>)
+
+## Inspecting Interface Status
