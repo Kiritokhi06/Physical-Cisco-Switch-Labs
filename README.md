@@ -26,6 +26,7 @@ The physical lab consists of a Cisco Catalyst 3750 switch connected to my Window
 The following projects document my progress in configuring, managing, and troubleshooting my physical Cisco switch.
 
 - [1 - Initial Setup and Device Discovery](<1 - Initial-Setup-&-Device-Discovery/README.md>)
+Establish console access, identify the switch and IOS version, and inspect the initial interface and VLAN configuration.
 
 - [2 - Secure Switch Management](<2 - Secure-Switch-Management/README.md>)
 
