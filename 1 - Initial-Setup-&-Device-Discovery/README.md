@@ -40,5 +40,5 @@ I also attempted to delete the VLAN database file using the following command:
 Switch# delete flash:vlan.dat
 ```
 
-The switch reported that the file did not exist at that location. Rather than treating this as a failed reset, I continued with the device discovery commands and verified the VLAN state afterward.
+The switch reported that the file didn't exist at that location. Rather than treating this as a failed reset, I continued with the device discovery commands and verified the VLAN state afterward.
 
