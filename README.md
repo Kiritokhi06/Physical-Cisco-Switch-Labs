@@ -21,7 +21,7 @@ The physical lab consists of a Cisco Catalyst 3750 switch connected to my Window
 ![Physical lab setup](<screenshots/Lab_Environment/Physical_Lab_Setup.jpeg>)
 
 ---
-### Lab Projects
+## Lab Projects
 
 The following projects document my progress in configuring, managing, and troubleshooting my physical Cisco switch.
 
