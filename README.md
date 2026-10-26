@@ -1,6 +1,6 @@
 # Physical Cisco Switch Labs
 
-### Overview
+## Overview
 
 This repository documents my hands-on networking labs using a physical Cisco Catalyst 3750 switch. The goal of these projects is to develop practical networking skills through device configuration, verification, and troubleshooting while documenting each lab's process and results.
 
