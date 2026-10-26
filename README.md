@@ -29,4 +29,4 @@ The following projects document my progress in configuring, managing, and troubl
 
 - [2 - Secure Switch Management](<2 - Secure-Switch-Management/README.md>)
 
--
+- [3 - VLANs & Port Assignment](<3 - VLANs-&-Port-Assignment/README.md>)
