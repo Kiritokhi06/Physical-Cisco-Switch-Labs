@@ -61,3 +61,42 @@ The switch was running an older IOS release, which is important for me to consid
 ![Show version cmd](<./screenshots/Show_version_cmd.png>)
 
 ## Inspecting Interface Status
+
+I used the **show interfaces status** command to inspect the switch's physical interfaces and review their current status, VLAN assignments, duplex settings, and speeds.
+
+The inspected interfaces were shown as **notconnect**, assigned to VLAN 1, with speed and duplex set to **auto**. This was expected because no end devices were connected to the switch ports during the inspection.
+
+The switch provides 48 FastEthernet ports and 4 GigabitEthernet ports, giving me a baseline for future interface configuration, VLAN assignment, and trunking exercises.
+
+Since the interface results were repetitive, I retained a representative screenshot rather than documenting every port individually.
+
+![Show interfaces status cmd](<./screenshots/show_interfaces_status_cmd.png>)
+
+## Verifying the VLAN Database
+
+To inspect the switch's VLAN database, I ran:
+
+```cli
+Switch# show vlan brief
+```
+
+The output showed VLAN 1, named **default**, in the active state, with the switch's FastEthernet and GigabitEthernet ports assigned to it. The default legacy VLANs 1002 through 1005 were also present.
+
+No custom VLANs appeared in the output. This confirmed the default VLAN state at the time of inspection and established a baseline for the VLAN creation and port assignment project.
+
+![Show vlan brief cmd](<./screenshots/Show_vlan_brief_cmd.png>)
+
+## Reviewing the Running Configuration
+
+Finally, I used the following command to inspect the active configuration:
+
+```cli
+Switch# show running-config
+```
+
+The output displayed the switch's current configuration, including the default hostname, service settings, and spanning-tree mode. The hostname remained Switch, and the switch was using Per-VLAN Spanning Tree (PVST).
+
+This provided an additional reference for the switch's starting configuration before making changes in subsequent labs.
+
+![Show running-config cmd](<./screenshots/show_running_config_cmd.png>)
+
