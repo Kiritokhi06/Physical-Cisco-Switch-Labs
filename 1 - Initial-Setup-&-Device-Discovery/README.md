@@ -23,3 +23,15 @@ The console connection used the following PuTTY serial settings:
 These settings establish the standard serial connection parameters used to access the switch's command-line interface (CLI).
 
 ![PuTTY(1)](<./screenshots/PuTTY(1).png>)
+
+## Clearing the Previous Configuration
+
+Before beginning the switching labs, I wanted to start with a clean configuration rather than inherit settings left by a previous user. From privileged EXEC mode, I used the following command to erase the saved configuration in NVRAM:
+
+```cli
+Switch# write erase
+```
+
+After confirming the operation, the switch reported that the NVRAM erase was complete. I then reloaded the switch to restart it with the saved configuration cleared.
+
+I also attempted to delete the VLAN database file using the following command:
