@@ -25,7 +25,7 @@ The physical lab consists of a Cisco Catalyst 3750 switch connected to my Window
 
 The following projects document my progress in configuring, managing, and troubleshooting my physical Cisco switch.
 
-- ![1 - Initial Setup and Device Discovery](<1 - Initial-Setup-&-Device-Discovery/README.md>)
+- [1 - Initial Setup and Device Discovery](<1 - Initial-Setup-&-Device-Discovery/README.md>)
 
 -
 
