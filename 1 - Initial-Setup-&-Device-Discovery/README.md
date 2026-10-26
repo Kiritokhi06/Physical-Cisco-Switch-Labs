@@ -100,3 +100,10 @@ This provided an additional reference for the switch's starting configuration be
 
 ![Show running-config cmd](<./screenshots/show_running_config_cmd.png>)
 
+## What I Learned and Result
+
+This project served as a refresher on accessing a physical Cisco switch through the console and using IOS commands to inspect its configuration and operational state. I revisited commands such as **show version, show interfaces status, show vlan brief, and show running-config** to verify the switch's hardware, interface status, VLAN database, and active configuration.
+
+I also gained practical experience clearing the switch's saved configuration and verifying its default state before beginning new labs. This established a clean baseline for future configuration and troubleshooting exercises.
+
+With the initial setup and device discovery complete, the switch is ready for the next project.
