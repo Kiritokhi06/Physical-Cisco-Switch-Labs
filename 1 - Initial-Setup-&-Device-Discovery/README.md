@@ -5,7 +5,7 @@
 The goal of this project was to establish console access to a physical Cisco Catalyst 3750 switch, clear its previous saved configuration, and inspect its hardware, IOS version, interfaces, and default VLAN database. This established a baseline for the switching and management labs that follow.
 
 > **Additional Documentation:**  
-> More detailed screenshots from each stage of the process are available in the [`screenshots`](<1 - Initial-Setup-&-Device-Discovery/screenshots>) directory.
+> More detailed screenshots from each stage of the process are available in the [`screenshots`](./screenshots/) directory.
 
 ## Console Access and Initial Setup
 
