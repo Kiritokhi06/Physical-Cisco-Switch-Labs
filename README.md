@@ -31,4 +31,8 @@ Establish console access, identify the switch and IOS version, and inspect the i
 
 - [2 - Secure Switch Management](<2 - Secure-Switch-Management/README.md>)
 
+Configure basic switch settings, management access, local authentication, and SSH.
+
 - [3 - VLANs & Port Assignment](<3 - VLANs-&-Port-Assignment/README.md>)
+
+Create VLANs, assign switch ports, and verify VLAN membership and interface configuration.
