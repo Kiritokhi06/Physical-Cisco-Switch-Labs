@@ -8,6 +8,14 @@ This repository documents my hands-on networking labs using a physical Cisco Cat
 
 ## Lab Environment
 
-The physical lab consists of a Cisco Catalyst 3750 switch, a Windows laptop, and a USB-to-RJ45 console cable used to access the switch CLI through PuTTY.
+The physical lab consists of a Cisco Catalyst 3750 switch connected to my Windows laptop through a USB-to-RJ45 console cable. I use PuTTY to access the switch's command-line interface and perform tasks.
+
+### Hardware and Tools
+
+- Switch: Cisco Catalyst 3750
+- IOS Version: 12.2(25)SEE2
+- Laptop: Windows
+- Terminal Emulator: PuTTY
+- Console Connection: USB-to-RJ45 console cable
 
 ![Physical lab setup](<screenshots/Lab_Environment/Physical_Lab_Setup.jpeg>)
