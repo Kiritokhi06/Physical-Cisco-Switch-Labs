@@ -27,6 +27,6 @@ The following projects document my progress in configuring, managing, and troubl
 
 - [1 - Initial Setup and Device Discovery](<1 - Initial-Setup-&-Device-Discovery/README.md>)
 
--
+- [2 - Secure Switch Management](<2 - Secure-Switch-Management/README.md>)
 
 -
