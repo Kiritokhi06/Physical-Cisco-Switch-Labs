@@ -8,4 +8,14 @@ The goal of this project was to establish console access to a physical Cisco Cat
 
 I connected my Windows laptop to the Cisco Catalyst 3750 using a USB-to-RJ45 console cable. I used Windows Device Manager to identify the assigned COM port and configured PuTTY to establish a serial connection to the switch.
 
-The console connection used the following settings:
+The console connection used the following PuTTY serial settings:
+
+- Serial Line: COM3
+- Speed: 9600 baud
+- Data Bits: 8
+- Stop Bits: 1
+- Parity: None
+- Flow Control: None
+
+These settings establish the standard serial connection parameters used to access the switch's command-line interface (CLI).
+
