@@ -35,3 +35,10 @@ Switch# write erase
 After confirming the operation, the switch reported that the NVRAM erase was complete. I then reloaded the switch to restart it with the saved configuration cleared.
 
 I also attempted to delete the VLAN database file using the following command:
+
+```cli
+Switch# delete flash:vlan.dat
+```
+
+The switch reported that the file did not exist at that location. Rather than treating this as a failed reset, I continued with the device discovery commands and verified the VLAN state afterward.
+
