@@ -18,4 +18,6 @@ The physical lab consists of a Cisco Catalyst 3750 switch connected to my Window
 - Terminal Emulator: PuTTY
 - Console Connection: USB-to-RJ45 console cable
 
+### Physical Setup
+
 ![Physical lab setup](<screenshots/Lab_Environment/Physical_Lab_Setup.jpeg>)
