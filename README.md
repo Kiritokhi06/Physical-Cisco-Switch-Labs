@@ -31,8 +31,8 @@ The following projects document my progress in configuring, managing, and troubl
 
 - [2 - Secure Switch Management](<2 - Secure-Switch-Management/README.md>)
 
-  > Configure the switch for secure administrative access, including local authentication, SSH, and management access restrictions.
-
+  > Configure basic switch settings, local user authentication, SSH remote access, and management access restrictions to establish a secure switch management environment.
+  
 - [3 - VLANs & Port Assignment](<3 - VLANs-&-Port-Assignment/README.md>)
 
   > Create VLANs, assign switch ports, and verify VLAN membership and interface configuration.
