@@ -61,7 +61,7 @@ The output identified the device as a Cisco Catalyst 3560-CX with the following 
 
 The switch is running Cisco IOS 15.2(4)E6, using the C3560CX-UNIVERSALK9-M software image. The installed IOS image includes cryptographic features, providing support for future secure management and SSH configuration labs.
 
-![Show version cmd](<./screenshots/Show_version_cmd(1).png>)
+![Show version cmd](<./screenshots/Show_version_cmd(2).png>)
 
 ## Inspecting Interface Status
 
