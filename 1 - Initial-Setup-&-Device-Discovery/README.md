@@ -55,9 +55,7 @@ The output identified the device as a Cisco Catalyst 3560-CX with the following 
 - Model: WS-C3560CX-8TC-S
 - IOS Version: 15.2(4)E6
 - IOS Image: C3560CX-UNIVERSALK9-M
-- License Level: IP Base
 - GigabitEthernet Interfaces: 12
-- Flash Storage: Approximately 122 MB
 
 The switch is running Cisco IOS 15.2(4)E6, using the C3560CX-UNIVERSALK9-M software image. The installed IOS image includes cryptographic features, providing support for future secure management and SSH configuration labs.
 
