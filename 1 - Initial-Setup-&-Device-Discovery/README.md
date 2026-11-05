@@ -2,14 +2,14 @@
 
 ### Overview
 
-The goal of this project was to establish console access to a physical Cisco Catalyst 3750 switch, clear its previous saved configuration, and inspect its hardware, IOS version, interfaces, and default VLAN database. This established a baseline for the switching and management labs that follow.
+The goal of this project was to establish console access to a physical Cisco Catalyst 3560-CX switch, clear its previous saved configuration, and inspect its hardware, IOS version, interfaces, and default VLAN database. This established a baseline for the switching and management labs that follow.
 
 > **Additional Documentation:**  
 > More detailed screenshots from each stage of the process are available in the [`screenshots`](./screenshots/) directory.
 
 ## Console Access and Initial Setup
 
-I connected my Windows laptop to the Cisco Catalyst 3750 using a USB-to-RJ45 console cable. I used Windows Device Manager to identify the assigned COM port and configured PuTTY to establish a serial connection to the switch.
+I connected my Windows laptop to the Cisco Catalyst 3560-CX using a USB-to-RJ45 console cable. I used Windows Device Manager to identify the assigned COM port and configured PuTTY to establish a serial connection to the switch.
 
 The console connection used the following PuTTY serial settings:
 
@@ -32,43 +32,46 @@ Before beginning the switching labs, I wanted to start with a clean configuratio
 Switch# write erase
 ```
 
-After confirming the operation, the switch reported that the NVRAM erase was complete. I then reloaded the switch to restart it with the saved configuration cleared.
-
-I also attempted to delete the VLAN database file using the following command:
-
-```cli
-Switch# delete flash:vlan.dat
-```
-
-The switch reported that the file didn't exist at that location. Rather than treating this as a failed reset, I continued with the device discovery commands and verified the VLAN state afterward.
+After confirming the operation, the switch reported that the NVRAM erase was complete. This removed the previously saved configuration and allowed me to establish a clean starting point for future labs.
 
 ![Write erase cmd](<./screenshots/Write_erase_cmd.png>)
 
+## Inspecting Flash Storage
+
+After clearing the previous configuration, I used the **dir flash:** command to inspect the switch's flash storage and identify the files and directories present.
+
+The output showed the switch's IOS image directory, along with other system files. The switch reported approximately 122 MB of total flash storage, with approximately 95 MB available.
+
+This provided a reference for the installed IOS image and available storage before making any future software or configuration changes.
+
+![Dir flash: cmd](<./screenshots/dir_flash_cmd.png>)
+
 ## Identifying the Switch and IOS Version
 
-After the reload, I used the **show version** command to identify the switch model, installed IOS version, and hardware specifications.
+I used the **show version** command to identify the switch model, installed IOS version, software image, and hardware specifications.
 
-The output identified the device as a Cisco Catalyst 3750 with the following details:
+The output identified the device as a Cisco Catalyst 3560-CX with the following details:
 
-- Model: WS-C3750-48TS-E
-- IOS Version: 12.2(25)SEE2
-- IOS Image: C3750-IP SERVICES-M
-- FastEthernet Interfaces: 48
-- GigabitEthernet Interfaces: 4
+- Model: WS-C3560CX-8TC-S
+- IOS Version: 15.2(4)E6
+- IOS Image: C3560CX-UNIVERSALK9-M
+- License Level: IP Base
+- GigabitEthernet Interfaces: 12
+- Flash Storage: Approximately 122 MB
 
-The switch was running an older IOS release, which is important for me to consider when selecting commands and security features for future labs. Some features and commands available on newer Cisco platforms may not be supported by this software version.
+The switch is running Cisco IOS 15.2(4)E6, using the C3560CX-UNIVERSALK9-M software image. The installed IOS image includes cryptographic features, providing support for future secure management and SSH configuration labs.
 
-![Show version cmd](<./screenshots/Show_version_cmd.png>)
+![Show version cmd](<./screenshots/Show_version_cmd(1).png>)
 
 ## Inspecting Interface Status
 
 I used the **show interfaces status** command to inspect the switch's physical interfaces and review their current status, VLAN assignments, duplex settings, and speeds.
 
-The inspected interfaces were shown as **notconnect**, assigned to VLAN 1, with speed and duplex set to **auto**. This was expected because no end devices were connected to the switch ports during the inspection.
+The inspected GigabitEthernet interfaces were shown as **notconnect** and assigned to VLAN 1, with speed and duplex set to **auto**. This was expected because no end devices were connected to the switch ports during the inspection.
 
-The switch provides 48 FastEthernet ports and 4 GigabitEthernet ports, giving me a baseline for future interface configuration, VLAN assignment, and trunking exercises.
+The output also showed that GigabitEthernet0/11 and GigabitEthernet0/12 were listed as **Not Present** in the **Type** column.
 
-Since the interface results were repetitive, I retained a representative screenshot rather than documenting every port individually.
+This provided a baseline for future interface configuration, VLAN assignment, and trunking exercises.
 
 ![Show interfaces status cmd](<./screenshots/show_interfaces_status_cmd.png>)
 
@@ -80,7 +83,7 @@ To inspect the switch's VLAN database, I ran:
 Switch# show vlan brief
 ```
 
-The output showed VLAN 1, named **default**, in the active state, with the switch's FastEthernet and GigabitEthernet ports assigned to it. The default legacy VLANs 1002 through 1005 were also present.
+The output showed VLAN 1, named **default**, in the active state, with the switch's GigabitEthernet ports assigned to it. The default legacy VLANs 1002 through 1005 were also present.
 
 No custom VLANs appeared in the output. This confirmed the default VLAN state at the time of inspection and established a baseline for the VLAN creation and port assignment project.
 
@@ -94,7 +97,7 @@ Finally, I used the following command to inspect the active configuration:
 Switch# show running-config
 ```
 
-The output displayed the switch's current configuration, including the default hostname, service settings, and spanning-tree mode. The hostname remained Switch, and the switch was using Per-VLAN Spanning Tree (PVST).
+The output displayed the switch's current configuration, including the default hostname, service settings, and spanning-tree configuration. The hostname remained Switch, and the switch was using Rapid Per-VLAN Spanning Tree (Rapid-PVST). The running config also showed that VLAN 1 had no IP address assigned to its SVI.
 
 This provided an additional reference for the switch's starting configuration before making changes in subsequent labs.
 
