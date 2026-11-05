@@ -32,7 +32,7 @@ Before beginning the switching labs, I wanted to start with a clean configuratio
 Switch# write erase
 ```
 
-After confirming the operation, the switch reported that the NVRAM erase was complete. This removed the previously saved configuration and allowed me to establish a clean starting point for future labs.
+After confirming the operation, the switch reported that the NVRAM erase was complete. I then reloaded the switch to apply the reset and allow it to start with its default configuration. This removed the previously saved configuration and allowed me to establish a clean starting point for future labs.
 
 ![Write erase cmd](<./screenshots/Write_erase_cmd.png>)
 
@@ -40,7 +40,7 @@ After confirming the operation, the switch reported that the NVRAM erase was com
 
 After clearing the previous configuration, I used the **dir flash:** command to inspect the switch's flash storage and identify the files and directories present.
 
-The output showed the switch's IOS image directory, along with other system files. The switch reported approximately 122 MB of total flash storage, with approximately 95 MB available.
+The output showed the switch's IOS image directory, along with other system files. The switch reported approximately 122.2 MB of total flash storage, with approximately 95.1 MB available.
 
 This provided a reference for the installed IOS image and available storage before making any future software or configuration changes.
 
