@@ -18,7 +18,7 @@ The physical lab consists of a Cisco Catalyst 3560-CX switch connected to my Win
 
 ### Physical Setup
 
-![Physical lab setup](<screenshots/Lab_Environment/Physical_Lab_Setup(1).jpeg>)
+![Physical lab setup](<screenshots/Lab_Environment/Physical_Lab_Setup(2).jpeg>)
 
 ---
 ## Lab Projects
