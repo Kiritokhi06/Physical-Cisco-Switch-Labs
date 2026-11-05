@@ -2,16 +2,16 @@
 
 ## Overview
 
-This repository documents my hands-on networking labs using a physical Cisco Catalyst 3750 switch. The goal of these projects is to develop practical networking skills through device configuration, verification, and troubleshooting while documenting each lab's process and results.
+This repository documents my hands-on networking labs using a physical Cisco Catalyst 3560-CX switch. The goal of these projects is to develop practical networking skills through device configuration, verification, and troubleshooting while documenting each lab's process and results.
 
 ## Lab Environment
 
-The physical lab consists of a Cisco Catalyst 3750 switch connected to my Windows laptop through a USB-to-RJ45 console cable. I use PuTTY to access the switch's command-line interface and perform tasks.
+The physical lab consists of a Cisco Catalyst 3560-CX switch connected to my Windows laptop through a USB-to-RJ45 console cable. I use PuTTY to access the switch's command-line interface and perform tasks.
 
 ### Hardware and Tools
 
-- Switch: Cisco Catalyst 3750
-- IOS Version: 12.2(25)SEE2
+- Switch: Cisco Catalyst 3560-CX
+- IOS Version: 15.2(4)E6
 - Laptop: Windows
 - Terminal Emulator: PuTTY
 - Console Connection: USB-to-RJ45 console cable
