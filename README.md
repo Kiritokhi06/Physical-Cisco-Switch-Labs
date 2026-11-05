@@ -27,11 +27,11 @@ The following projects document my progress in configuring, managing, and troubl
 
 - [1 - Initial Setup and Device Discovery](<1 - Initial-Setup-&-Device-Discovery/README.md>)
 
-  > Establish console access, identify the switch and IOS version, and inspect the initial interface and VLAN configuration.
+  > Establish console access, clear the previous configuration, and inspect the switch's hardware, IOS, interfaces, and default VLAN configuration.
 
 - [2 - Secure Switch Management](<2 - Secure-Switch-Management/README.md>)
 
-  > Configure basic switch settings, management access, local authentication, and SSH.
+  > Configure the switch for secure administrative access, including local authentication, SSH, and management access restrictions.
 
 - [3 - VLANs & Port Assignment](<3 - VLANs-&-Port-Assignment/README.md>)
 
